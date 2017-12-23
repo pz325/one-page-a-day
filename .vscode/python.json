@@ -23,5 +23,13 @@
             "},"
 		],
 		"description": "Add long exercises with description"
-	}
+    },
+    
+	"Add underlined blank": {
+        "prefix": "underlined_blank",
+        "body": [
+            "$\\rule{2cm}{0.15mm}$"
+        ],
+        "description": "Add underlined blank"
+    }
 }
