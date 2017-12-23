@@ -3,7 +3,7 @@
 This module generate books
 '''
 
-from pylatex import Document, Section, Itemize, Command
+from pylatex import Document, Section, Itemize, Command, Enumerate
 from pylatex.utils import NoEscape
 import assets.shanghai_maths_project.year6
 
@@ -25,7 +25,7 @@ def generage_books():
 
         for section in book['sections']:
             with doc.create(Section(section['title'], numbering=False)):
-                with doc.create(Itemize()) as items:
+                with doc.create(Enumerate()) as items:
                     for exercise in section['exercies']:
                         if isinstance(exercise, basestring):
                             items.add_item(NoEscape(exercise))
