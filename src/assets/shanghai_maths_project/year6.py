@@ -5,8 +5,9 @@ contents of zhenglin's year6 exercise
 '''
 
 ZHENGLIN_YEAR6 = {
-    'title': 'Year 6',
+    'title': 'Shanthai Math Project Year 6',
     'user': 'Zhenglin',
+    'language': 'english',
     'sections': [
         {
             'title': '3.1 Using letters to represent numbers (1)',
@@ -95,7 +96,7 @@ ZHENGLIN_YEAR6 = {
                     ]
                 },
                 {
-                    'description': r'There are $a$ pupils in a school\'s track and field team. The number of pupils in the hockey team is 4 fewer than twice the number in the track and field team.' ,
+                    'description': r'There are $a$ pupils in a school\'s track and field team. The number of pupils in the hockey team is 4 fewer than twice the number in the track and field team.',
                     'exercises': [
                         r'Use an expression with letters to represent the total number of pupils in the two teams',
                         r'When $a=24$, how many pupils are there in the two teams?'
@@ -154,5 +155,3 @@ ZHENGLIN_YEAR6 = {
         },  # a section object
     ]
 }  # a book object
-
-# $\rule{2cm}{0.15mm}$
