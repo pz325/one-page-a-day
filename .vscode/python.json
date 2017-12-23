@@ -1,0 +1,27 @@
+{
+	"Add section": {
+		"prefix": "add_section",
+		"body":[
+			"{",
+            	"\t'title': '${1}',",
+            	"\t'exercies': [",
+                	"\t\tr'${2}',",
+            	"\t]",
+        	"},"
+		],
+		"description": "Add a new section to book"
+	},
+
+	"Add long exercises": {
+		"prefix": "add_long_exercise",
+		"body": [
+			"{",
+                "\t'description': r'$1',",
+                "\t'exercises': [",
+                    "\t\tr'$2',",
+                "\t]",
+            "},"
+		],
+		"description": "Add long exercises with description"
+	}
+}

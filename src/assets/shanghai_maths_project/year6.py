@@ -1,3 +1,5 @@
+# pylint: disable=C0301
+
 '''
 contents of zhenglin's year6 exercise
 '''
@@ -14,7 +16,7 @@ ZHENGLIN_YEAR6 = {
                 r'In an isosceles triangle, if the base angle is $a^{\circ}$, the degree of the vertex angle is $\rule{2cm}{0.15mm}$',
                 r'When the sum of three consecutive even number is $a$, then the number in the middle is $\rule{2cm}{0.15mm}$, the least number is $\rule{2cm}{0.15mm}$ and the gratest number is $\rule{2cm}{0.15mm}$'
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': '3.2 Using letters to represent numbers (2)',
             'exercies': [
@@ -40,8 +42,8 @@ ZHENGLIN_YEAR6 = {
                     ]
                 },
             ]
-        }, # a section object
-                {
+        },  # a section object
+        {
             'title': '3.3 Simplification and evaluation (1)',
             'exercies': [
                 {
@@ -69,6 +71,6 @@ ZHENGLIN_YEAR6 = {
                 },
                 r'The length and width of a rectangle are $a$ cm and $b$ cm respectively, and $a>b$. The side length of a square equals the difference between the two sides of the rectangle. What is the sum of their perimeters?'
             ]
-        }, # a section object
+        },  # a section object
     ]
-} # a book object
+}  # a book object
