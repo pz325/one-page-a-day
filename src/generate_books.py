@@ -8,7 +8,7 @@ This module generate books
 
 import os
 
-from pylatex import Document, Section, Itemize, Command, Enumerate, Tabu
+from pylatex import Document, Section, Itemize, Command, Enumerate, LongTabu
 from pylatex.utils import NoEscape
 import assets.shanghai_maths_project.year6
 import assets.spanish.year6
@@ -63,9 +63,10 @@ def generate_table(book):
     TABLE_FORMAT = "X[l] X[r]"
     for section in book['sections']:
         with doc.create(Section(section['title'], numbering=False)):
-            with doc.create(Tabu(TABLE_FORMAT, row_height=2.0)) as table:
+            with doc.create(LongTabu(TABLE_FORMAT, row_height=2.0)) as table:
+                table.end_table_header()
                 for exercise in section['exercises']:
-                    table.add_row(exercise)
+                    table.add_row([NoEscape(exercise[0]), NoEscape(exercise[1])])
                     table.add_hline()
 
     book_name = '{target_path}/{user} {title}'.format(

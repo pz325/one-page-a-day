@@ -7,7 +7,7 @@
             	"\t'exercises': [",
                 	"\t\tr'${2}',",
             	"\t]",
-        	"},"
+        	"}, # a section object"
 		],
 		"description": "Add a new section to book"
 	},
