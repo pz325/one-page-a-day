@@ -4,7 +4,7 @@
 		"body":[
 			"{",
             	"\t'title': '${1}',",
-            	"\t'exercies': [",
+            	"\t'exercises': [",
                 	"\t\tr'${2}',",
             	"\t]",
         	"},"

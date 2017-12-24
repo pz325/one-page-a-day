@@ -7,11 +7,11 @@ contents of zhenglin's year6 exercise
 ZHENGLIN_YEAR6 = {
     'title': 'Shanthai Math Project Year 6',
     'user': 'Zhenglin',
-    'language': 'english',
+    'template': 'exam',
     'sections': [
         {
             'title': '3.1 Using letters to represent numbers (1)',
-            'exercies': [
+            'exercises': [
                 r'$b+b+b+b\times b$ can be simply written as $\rule{2cm}{0.15mm}$',
                 r'In a triangle, if $\angle 1=a^{\circ}$ and $\angle 2=b^{\circ}$, then $\angle 3=$ $\rule{2cm}{0.15mm}$.',
                 r'In an isosceles triangle, if the base angle is $a^{\circ}$, the degree of the vertex angle is $\rule{2cm}{0.15mm}$',
@@ -20,7 +20,7 @@ ZHENGLIN_YEAR6 = {
         },  # a section object
         {
             'title': '3.2 Using letters to represent numbers (2)',
-            'exercies': [
+            'exercises': [
                 {
                     'description': r'Use expressions with letters to represent the relations between quantities.',
                     'exercises': [
@@ -46,7 +46,7 @@ ZHENGLIN_YEAR6 = {
         },  # a section object
         {
             'title': '3.3 Simplification and evaluation (1)',
-            'exercies': [
+            'exercises': [
                 {
                     'description': r'Simplify the following expressions.',
                     'exercises': [
@@ -75,7 +75,7 @@ ZHENGLIN_YEAR6 = {
         },  # a section object
         {
             'title': '3.4 Simplification and evaluation (2)',
-            'exercies': [
+            'exercises': [
                 {
                     'description': r'To repair a section of a road, the repair team repaired $c$ m of the road every day for the first 6 days, and there were $s$ m left.',
                     'exercises': [
@@ -106,7 +106,7 @@ ZHENGLIN_YEAR6 = {
         }, # a section object
         {
             'title': '3.5 Simple equations (1)',
-            'exercies': [
+            'exercises': [
                 {
                     'description': r'True or False',
                     'exercises': [
@@ -118,7 +118,7 @@ ZHENGLIN_YEAR6 = {
         },  # a section object
         {
             'title': '3.6 Simple equations (2)',
-            'exercies': [
+            'exercises': [
                 {
                     'description': r'Emily was given \pounds30 in \pounds2 coins and \pounds5 notes. Let $x$ be the number of \pounds2 coins and $y$ be the number of \pounds5 nodes.',
                     'exercises': [
@@ -131,7 +131,7 @@ ZHENGLIN_YEAR6 = {
         },  # a section object
         {
             'title': '3.7 Simple equations (3)',
-            'exercies': [
+            'exercises': [
                 {
                     'description': r'Write the equation first and then find the solution',
                     'exercises': [
@@ -143,7 +143,7 @@ ZHENGLIN_YEAR6 = {
         },  # a section object
         {
             'title': '3.8 Using equations to solve problems (1)',
-            'exercies': [
+            'exercises': [
                 {
                     'description': r'Write equations and then solve the application problems.',
                     'exercises': [
