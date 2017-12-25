@@ -8,7 +8,9 @@ This module generate books
 
 import os
 
-from pylatex import Document, Section, Itemize, Command, Enumerate, LongTabu
+from pylatex import Document, Section, Command, LongTabu
+from pylatex.base_classes import Environment
+
 from pylatex.utils import NoEscape
 import assets.shanghai_maths_project.year6
 import assets.spanish.year6
@@ -20,6 +22,41 @@ BOOKS = [
 
 TARGET_PATH = 'dist'
 
+class Parts(Environment):
+    r'''
+    Template for parts block used with \question
+    \begig{parts}
+        \part part 1
+        \part part 2
+    \end{parts}
+    '''
+    omit_if_empty = True
+
+    def add_part(self, part):
+        r'''
+        append a \part item
+        '''
+        self.append(Command('part'))
+        self.append(part)
+
+
+class Questions(Environment):
+    r'''
+    Template for questions block used with exam documentclass
+    \begin{questions}
+        \question A question
+        \question Another question
+    \end{questions}
+    '''
+    omit_if_empty = True
+
+    def add_question(self, question):
+        r'''
+        append a \question item
+        '''
+        self.append(Command('question'))
+        self.append(question)
+
 
 def generate_exam(book):
     '''
@@ -27,26 +64,23 @@ def generate_exam(book):
     Suitable for Math
     '''
     print 'generating book: {title}'.format(title=book['title'])
-    doc = Document()
-    doc.preamble.append(Command('title', NoEscape(book['title'])))
-    doc.preamble.append(Command('author', book['user']))
-    doc.preamble.append(Command('date', NoEscape(r'\today')))
-    doc.append(NoEscape(r'\maketitle'))
+    doc = Document(documentclass='exam')
 
     for section in book['sections']:
         with doc.create(Section(section['title'], numbering=False)):
-            with doc.create(Enumerate()) as items:
+            with doc.create(Questions()) as questions:
                 for exercise in section['exercises']:
                     if isinstance(exercise, basestring):
-                        items.add_item(NoEscape(exercise))
+                        questions.add_question(NoEscape(exercise))
                     else:
-                        items.add_item(NoEscape(exercise['description']))
-                        with items.create(Itemize()) as sub_items:
+                        questions.add_question(NoEscape(exercise['description']))
+                        with questions.create(Parts()) as parts:
                             for sub_exercise in exercise['exercises']:
-                                sub_items.add_item(NoEscape(sub_exercise))
+                                parts.add_part(NoEscape(sub_exercise))
 
     book_name = '{target_path}/{user} {title}'.format(target_path=TARGET_PATH, user=book['user'], title=book['title'])
-    doc.generate_pdf(book_name, clean_tex=True)
+    # import pdb; pdb.set_trace()
+    doc.generate_pdf(book_name, clean_tex=False)
 
 def generate_table(book):
     '''
