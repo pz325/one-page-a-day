@@ -2,10 +2,10 @@
 # pylint: disable=C0301
 
 '''
-contents of Zhenglin's  Spanish year 6
+contents of Zhenglin's  Spanish year 7
 '''
 ZHENGLIN_YEAR6 = {
-    'title': 'Spanish Year 6',
+    'title': 'Spanish Year 7',
     'user': 'Zhenglin',
     'template': 'table',
     'sections':[
