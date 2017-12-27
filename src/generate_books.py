@@ -13,11 +13,12 @@ from pylatex.base_classes import Environment
 
 from pylatex.utils import NoEscape
 import assets.shanghai_maths_project.year6
-import assets.spanish.year6
+import assets.spanish.year7
 
 BOOKS = [
     assets.shanghai_maths_project.year6.ZHENGLIN_YEAR6,
-    assets.spanish.year6.ZHENGLIN_YEAR6
+    assets.spanish.year7.ZHENGLIN_YEAR7,
+    assets.spanish.year7.ZOOM_ESPANOL_1,
 ]
 
 TARGET_PATH = 'dist'

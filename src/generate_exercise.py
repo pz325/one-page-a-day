@@ -11,15 +11,14 @@ import os
 import random
 
 from pylatex import Document, Section, Command, LongTabu
-from pylatex.base_classes import Environment
 
 from pylatex.utils import NoEscape
 import assets.shanghai_maths_project.year6
-import assets.spanish.year6
+import assets.spanish.year7
 
 BOOKS = [
     assets.shanghai_maths_project.year6.ZHENGLIN_YEAR6,
-    assets.spanish.year6.ZHENGLIN_YEAR6
+    assets.spanish.year7.ZHENGLIN_YEAR7,
 ]
 
 TARGET_PATH = 'dist'
@@ -43,41 +42,60 @@ def generate_table(book):
                 table.end_table_header()
                 for exercise in section['exercises']:
                     table.add_row([NoEscape(exercise[0]), NoEscape(exercise[1])])
-                    table.add_hline()
+                    # table.add_hline()
 
     book_name = '{target_path}/{user} {title}'.format(
         target_path=TARGET_PATH, user=book['user'], title=book['title'])
     doc.generate_pdf(book_name, clean_tex=True)
 
-
-def random_table_exercise(book):
+def random_spanish_exercise(book):
     '''
-    random table style exercise
+    random spanish exercise, in table style
+
+    one-page exercies has two section: translate into English / translate into Spanish
+    also generate one-page, with answers to the two sections
     '''
     num_exercises = 9
-    exercises = []
+
+    # collect all exercises
+    all_exercises = []
     for section in book['sections']:
         for exercise in section['exercises']:
-            exercises.append(exercise)
+            all_exercises.append(exercise)
 
     ret = {}
     ret['title'] = book['title'] + ' one page exercise'
     ret['user'] = book['user']
     ret['template'] = book['template']
     ret['sections'] = []
-    section1 = {}
-    section1['title'] = 'Translate'
-    section1['exercises'] = [(x, r'') for x, _ in random.sample(exercises, num_exercises)]
-    section2 = {}
-    section2['title'] = 'Translate'
-    section2['exercises'] = [(r'', x) for _, x in random.sample(exercises, num_exercises)]
-    ret['sections'].append(section1)
-    ret['sections'].append(section2)
+
+    section_to_english = {}
+    section_to_english['title'] = 'Translate into English'
+    random_exercises = random.sample(all_exercises, num_exercises)
+    section_to_english['exercises'] = [(x, r'') for x, _ in random_exercises]
+
+    section_to_english_answer = {}
+    section_to_english_answer['title'] = 'Translate into English (Answer)'
+    section_to_english_answer['exercises'] = random_exercises
+
+    section_to_spanish = {}
+    section_to_spanish['title'] = 'Translate into Spanish'
+    random_exercises = random.sample(all_exercises, num_exercises)
+    section_to_spanish['exercises'] = [(x, r'') for _, x in random_exercises]
+
+    section_to_spanish_answer = {}
+    section_to_spanish_answer['title'] = 'Translate into Spanish (Answer)'
+    section_to_spanish_answer['exercises'] = [(y, x) for x, y in random_exercises]
+
+    ret['sections'].append(section_to_english)
+    ret['sections'].append(section_to_spanish)
+    ret['sections'].append(section_to_english_answer)
+    ret['sections'].append(section_to_spanish_answer)
 
     return ret
 
 
-def generate_exercise():
+def main():
     '''
     Generate one page exercise
     '''
@@ -85,9 +103,9 @@ def generate_exercise():
         os.mkdir(TARGET_PATH)
 
     for book in BOOKS:
-        if book['template'] == 'table':
-            generate_table(random_table_exercise(book))
+        if book['template'] == 'table' and book['subject'] == 'spanish':
+            generate_table(random_spanish_exercise(book))
 
 
 if __name__ == '__main__':
-    generate_exercise()
+    main()

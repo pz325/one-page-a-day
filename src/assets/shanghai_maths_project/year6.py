@@ -5,9 +5,10 @@ contents of zhenglin's year6 exercise
 '''
 
 ZHENGLIN_YEAR6 = {
-    'title': 'Shanthai Math Project Year 6',
+    'title': 'Shanghai Math Project Year 6',
     'user': 'Zhenglin',
     'template': 'exam',
+    'subject': 'math',
     'sections': [
         {
             'title': '3.1 Using letters to represent numbers (1)',
