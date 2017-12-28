@@ -17,8 +17,8 @@ import assets.shanghai_maths_project.year6
 import assets.spanish.year7
 
 BOOKS = [
-    assets.shanghai_maths_project.year6.ZHENGLIN_YEAR6,
-    assets.spanish.year7.ZHENGLIN_YEAR7,
+    # assets.shanghai_maths_project.year6.ZHENGLIN_YEAR6,
+    assets.spanish.year7.ZOOM_ESPANOL_1,
 ]
 
 TARGET_PATH = 'dist'
@@ -48,9 +48,12 @@ def generate_table(book):
         target_path=TARGET_PATH, user=book['user'], title=book['title'])
     doc.generate_pdf(book_name, clean_tex=True)
 
-def random_spanish_exercise(book):
+def random_spanish_exercise(book, sections=None):
     '''
     random spanish exercise, in table style
+    @param book
+    @param sections range of sections. None means all sections
+    @return 
 
     one-page exercies has two section: translate into English / translate into Spanish
     also generate one-page, with answers to the two sections
@@ -59,9 +62,16 @@ def random_spanish_exercise(book):
 
     # collect all exercises
     all_exercises = []
-    for section in book['sections']:
-        for exercise in section['exercises']:
-            all_exercises.append(exercise)
+    if sections:
+        for section_index in sections:
+            if section_index < 0 or section_index >= len(book['sections']):
+                continue
+            for exercise in book['sections'][section_index]['exercises']:
+                all_exercises.append(exercise)
+    else:
+        for section in book['sections']:
+            for exercise in section['exercises']:
+                all_exercises.append(exercise)
 
     ret = {}
     ret['title'] = book['title'] + ' one page exercise'
@@ -104,7 +114,7 @@ def main():
 
     for book in BOOKS:
         if book['template'] == 'table' and book['subject'] == 'spanish':
-            generate_table(random_spanish_exercise(book))
+            generate_table(random_spanish_exercise(book, [0]))
 
 
 if __name__ == '__main__':
