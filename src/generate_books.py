@@ -7,13 +7,19 @@ This module generate books
 '''
 
 import os
+import sys
 
-from pylatex import Document, Section, Command, LongTabu
+
+from pylatex import Document, Section, Command, LongTabu, Package
 from pylatex.base_classes import Environment
 
 from pylatex.utils import NoEscape
 import assets.shanghai_maths_project.year6
 import assets.spanish.year7
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 
 BOOKS = [
     assets.shanghai_maths_project.year6.ZHENGLIN_YEAR6,
@@ -66,7 +72,7 @@ def generate_exam(book):
     '''
     print 'generating book: {title}'.format(title=book['title'])
     doc = Document(documentclass='exam')
-
+    doc.packages.append(Package('ctex'))
     for section in book['sections']:
         with doc.create(Section(section['title'], numbering=False)):
             with doc.create(Questions()) as questions:
@@ -81,7 +87,7 @@ def generate_exam(book):
 
     book_name = '{target_path}/{user} {title}'.format(target_path=TARGET_PATH, user=book['user'], title=book['title'])
     # import pdb; pdb.set_trace()
-    doc.generate_pdf(book_name, clean_tex=False)
+    doc.generate_pdf(book_name, clean_tex=False, compiler='xelatex')
 
 def generate_table(book):
     '''
@@ -90,6 +96,7 @@ def generate_table(book):
     '''
     print 'generating book: {title}'.format(title=book['title'])
     doc = Document()
+    doc.packages.append(Package('ctex'))
     doc.preamble.append(Command('title', NoEscape(book['title'])))
     doc.preamble.append(Command('author', book['user']))
     doc.preamble.append(Command('date', NoEscape(r'\today')))
@@ -106,7 +113,7 @@ def generate_table(book):
 
     book_name = '{target_path}/{user} {title}'.format(
         target_path=TARGET_PATH, user=book['user'], title=book['title'])
-    doc.generate_pdf(book_name, clean_tex=True)
+    doc.generate_pdf(book_name, clean_tex=True, compiler='xelatex')
 
 
 def generage_books():

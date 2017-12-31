@@ -15,6 +15,22 @@ Install extensions:
 * LaText Workshop
 * Python
 
+Use xelatex as the default latex compiler for Chinese support 
+```
+"latex-workshop.latex.toolchain": [
+        {
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        }
+    ],
+```
+
 ## Code snippets
 .vscode/python.json has some snippets for adding section/exercie.
 
