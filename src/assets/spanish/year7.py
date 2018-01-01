@@ -167,7 +167,7 @@ ZHENGLIN_YEAR7 = {
                 ('octubre', 'October'),
                 ('noviembre', 'November'),
                 ('diciembre', 'December'),
-                ('Feliz cumplean\~os', 'Happy birthday')
+                ('Feliz Cumpleaños', 'Happy birthday')
             ]
         },
     ]
