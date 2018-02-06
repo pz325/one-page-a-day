@@ -34,7 +34,7 @@ def random_spanish_exercise(book, sections=None):
     one-page exercies has two section: translate into English / translate into Spanish
     also generate one-page, with answers to the two sections
     '''
-    num_exercises = 7
+    num_exercises = 30
 
     # collect all exercises
     all_exercises = []

@@ -239,7 +239,7 @@ ZOOM_ESPANOL_1 = {
                 ('el tío', 'uncle'),
                 ('la tía', 'aunt'),
                 ('el primo', 'cousin(m)'),
-                ('el prima', 'cousin(f)'),
+                ('la prima', 'cousin(f)'),
                 ('el hermanastro', 'stepbrother'),
                 ('la hermanastra', 'stepsister'),
                 ('el padrastro', 'stepfather'),

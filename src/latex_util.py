@@ -8,6 +8,11 @@ from pylatex.utils import NoEscape
 TARGET_PATH = 'dist'
 _TABLE_FORMAT = "X[l] X[r]"
 
+GEOMETRY_OPTIONS = {
+    'left': '1cm',
+    'right': '1cm',
+    'top': '2cm'
+}
 
 class Parts(Environment):
     r'''
@@ -87,13 +92,13 @@ def generate_table(book):
     suitable for language learning: e.g. Spanish / English etc
     '''
     print 'generating book: {title}'.format(title=book['title'])
-    doc = Document()
+    doc = Document(geometry_options=GEOMETRY_OPTIONS)
     doc = _setup_doc(doc, book)
     # doc.append(NoEscape(r'\maketitle'))
 
     for section in book['sections']:
         with doc.create(Section(section['title'], numbering=False)):
-            with doc.create(LongTabu(_TABLE_FORMAT, row_height=2.0)) as table:
+            with doc.create(LongTabu(_TABLE_FORMAT, row_height=1.2)) as table:
                 table.end_table_header()
                 for exercise in section['exercises']:
                     table.add_row(
