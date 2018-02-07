@@ -157,7 +157,7 @@ ZHENGLIN_YEAR7 = {
                 ('meses', 'months'),
                 ('enero', 'January'),
                 ('febrero', 'February'),
-                ('marco', 'March'),
+                ('marzo', 'March'),
                 ('abril', 'April'),
                 ('mayo', 'May'),
                 ('junio', 'June'),
@@ -454,5 +454,76 @@ ZOOM_ESPANOL_1 = {
                 ('informal', 'informal')
             ]
         }, # a section object
+    ]
+}
+
+'''
+contents of spelling bee
+'''
+SPELLING_BEE = {
+    'title': 'Spelling Bee',
+    'user': 'Zhenglin',
+    'template': 'table',
+    'subject': 'spanish',
+    'sections':[
+        {
+            'title': 'Stage 1',
+            'exercises': [
+                ('bienvenido', 'welcome'),
+                ('y', 'and'),
+                ('pero', 'but'),
+                ('con', 'with'),
+                ('sin', 'without'),
+                ('para', 'in order to'),
+                ('si', 'if'),
+                ('primero', 'first'),
+                ('segundo', 'second'),
+                ('tercero', 'third'),
+                ('un hermano', 'a brother'),
+                ('una hermana', 'a sister'),
+                ('grande', 'big'),
+                ('pequeño', 'small'),
+                ('hay', 'there is/are'),
+                ('ayer', 'yesterday'),
+                ('hoy', 'today'),
+                ('mañana', 'tomorrow'),
+                ('porque', 'because'),
+                ('¿quién?', 'who?'),
+                ('¿dónde?', 'where?'),
+                ('¿cómo?', 'how?'),
+                ('¿por qué?', 'why?'),
+                ('¿qué?', 'what?'),
+                ('¿cuánto?', 'how much/many?')
+            ]
+        },  # a section object
+        {
+            'title': 'Stage 2',
+            'exercises': [
+                ('lunes', 'Monday'),
+                ('martes', 'Tuesday'),
+                ('miércoles', 'Wednesday'),
+                ('jueves', 'Thursday'),
+                ('viernes', 'Friday'),
+                ('sábado', 'Saturday'),
+                ('domingo', 'Sunday'),
+                ('durante', 'during'),
+                ('antes', 'before'),
+                ('después', 'after'),
+                ('ahora', 'now'),
+                ('la mañana', 'the morning'),
+                ('la tarde', 'the afternoon / the evening'),
+                ('la noche', 'the night'),
+                ('un día', 'a day'),
+                ('una semana', 'a week'),
+                ('un mes', 'a month'),
+                ('un año', 'a year'),
+                ('temprano', 'early'),
+                ('tarde', 'late'),
+                ('nunca', 'never'),
+                ('a veces', 'sometimes'),
+                ('a menudo', 'often'),
+                ('luego', 'next')
+            ]
+        },  # a section object
     ]
 }
