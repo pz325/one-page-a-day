@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0301
 
-from pylatex import Document, Section, Command, LongTabu, Package
+from pylatex import Document, Section, Command, LongTabu, Package, NewPage
 from pylatex.base_classes import Environment
 from pylatex.utils import NoEscape
 
 TARGET_PATH = 'dist'
-_TABLE_FORMAT = "X[l] X[r]"
+_TABLE_FORMAT = "X[l] X[r] X[l] X[r] X[l] X[r]"
 
 GEOMETRY_OPTIONS = {
     'left': '1cm',
@@ -96,14 +96,22 @@ def generate_table(book):
     doc = _setup_doc(doc, book)
     # doc.append(NoEscape(r'\maketitle'))
 
+    section_count = 0
     for section in book['sections']:
         with doc.create(Section(section['title'], numbering=False)):
-            with doc.create(LongTabu(_TABLE_FORMAT, row_height=1.2)) as table:
+            with doc.create(LongTabu(_TABLE_FORMAT, row_height=1.5)) as table:
                 table.end_table_header()
+                row_elements = []
                 for exercise in section['exercises']:
-                    table.add_row(
-                        [NoEscape(exercise[0]), NoEscape(exercise[1])])
+                    row_elements.append(NoEscape(exercise[0]))
+                    row_elements.append(NoEscape(exercise[1]))
+                    if len(row_elements) == 6:
+                        table.add_row(row_elements)
+                        row_elements = []
                     # table.add_hline()
+        section_count += 1
+        if section_count % 2 == 0:
+            doc.append(NewPage())
 
     book_name = '{target_path}/{user} {title}'.format(
         target_path=TARGET_PATH, user=book['user'], title=book['title'])

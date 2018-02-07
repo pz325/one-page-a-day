@@ -71,5 +71,32 @@ ZHENGLIN_YEAR7 = {
                 ('vīnum', 'wine')
             ]
         }, # a section object
+        {
+            'title': 'In Foro',
+            'exercises': [
+                ('agit', 'does'),
+                ('ānulus', 'ring'),
+                ('coquit', 'cooks'),
+                ('cūr?', 'why?'),
+                ('ē', 'from, out of'),
+                ('ego', 'I'),
+                ('ēheu!', 'oh dear!, oh no!'),
+                ('habet', 'has'),
+                ('inquit', 'says'),
+                ('iūdex', 'judge'),
+                ('mendāx', 'liar'),
+                ('pecūnia', 'money'),
+                ('perterritus', 'terrified'),
+                ('poēta', 'poet'),
+                ('quaerit', 'looks for, searches for'),
+                ('quis?', 'who?'),
+                ('reddit', 'gives back'),
+                ('satis', 'enough'),
+                ('sed', 'but'),
+                ('signum', 'sign, seal'),
+                ('tū', 'you'),
+                ('vocat', 'calls')
+            ]
+        },  # a section object
     ]
 }
