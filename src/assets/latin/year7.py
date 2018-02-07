@@ -56,7 +56,7 @@ ZHENGLIN_YEAR7 = {
                 ('exit', 'goes out'),
                 ('exspectat', 'waits for'),
                 ('iānua', 'door'),
-                ('īrārus', 'angry'),
+                ('īrātus', 'angry'),
                 ('leō', 'lion'),
                 ('magnus', 'big'),
                 ('nāvis', 'ship'),
