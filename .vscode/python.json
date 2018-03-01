@@ -31,5 +31,13 @@
             "$\\rule{2cm}{0.15mm}$"
         ],
         "description": "Add underlined blank"
-    }
+	},
+
+	"Add new word": {
+		"prefix": "new_word",
+		"body": [
+			"('$1', '$2'),"
+		],
+		"description": "Add new word"
+	}
 }
