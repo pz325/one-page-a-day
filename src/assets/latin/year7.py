@@ -98,5 +98,22 @@ ZHENGLIN_YEAR7 = {
                 ('vocat', 'calls')
             ]
         },  # a section object
+        {
+            'title': 'to be',
+            'exercises': [
+                ('sum', 'I am'),
+                ('es', 'you (sing.) are'),
+                ('est', 'he/she/it is'),
+                ('summus', 'we are'),
+                ('estis', 'you (pl.) are'),
+                ('sunt', 'they are'),
+                ('eram', 'I was'),
+                ('eras', 'you (sing.) were'),
+                ('erat', 'he/she/it was'),
+                ('eramus', 'we were'),
+                ('eratis', 'you (pl.) were'),
+                ('erant', 'they were'),
+            ]
+        }, # a section object
     ]
 }
