@@ -249,7 +249,7 @@ ZHENGLIN_YEAR7 = {
                 ('cubiculum', 'bedroom'),
                 ('emit', 'buys'),
                 ('ferōciter', 'fiercely'),
-                ('festiīnat', 'hurries'),
+                ('festīnat', 'hurries'),
                 ('fortis', 'brave'),
                 ('fūr', 'thief'),
                 ('intentē', 'intently, carefully'),
