@@ -295,7 +295,7 @@ ZOOM_ESPANOL_1 = {
                 ('una rata', 'a rat'),
                 ('una tortuga', 'a turtle / tortoise'),
                 ('un perro', 'a dog'),
-                ('rua araña', 'a spider'),
+                ('una araña', 'a spider'),
                 ('un pez', 'a fish'),
                 ('un conejo', 'a rabbit'),
                 ('un caballo', 'a horse'),
