@@ -5,7 +5,7 @@
 contents of Zhenglin's  Latin year 7
 '''
 ZHENGLIN_YEAR7 = {
-    'title': 'Latin Year 7',
+    'title': 'Cambridge Latin Course Book I',
     'user': 'Zhenglin',
     'template': 'table',
     'subject': 'latin',
