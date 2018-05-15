@@ -8,6 +8,7 @@ BOOKS = [
     assets.spanish.year7.ZOOM_ESPANOL_1,
     assets.latin.year7.ZHENGLIN_YEAR7,
     assets.spanish.year7.SPELLING_BEE,
+    assets.spanish.year7.TUTOR,
     assets.chinese.year1.YU_WEN_SHIZI,
     assets.chinese.year1.YU_WEN_XIEZI
 ]

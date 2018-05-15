@@ -677,3 +677,34 @@ SPELLING_BEE = {
         }, # a section object
     ]
 }
+
+
+'''
+contents from tutor
+'''
+TUTOR = {
+    'title': 'Tutor',
+    'user': 'Zhenglin',
+    'template': 'table',
+    'subject': 'spanish',
+    'sections':[
+        {
+            'title': 'Vocabulary',
+            'exercises': [
+                ('alumnos', 'students'),
+                ('estuche', 'pencil case'),
+                ('sacapuntas', 'sharpener'),
+                ('regla', 'ruler'),
+                ('pelota', 'ball'),
+                ('ventana', 'window'),
+                ('dar miedo', 'scare'),
+                ('coche', 'car'),
+                ('barco', 'boat / ship'),
+                ('obra de teatro', 'a play'),
+                ('semáforo', 'traffic lights'),
+                ('la derecha', 'to the right / the right'),
+                ('la izquierda', 'to the left / the left'),
+            ]
+        }
+    ]
+}
