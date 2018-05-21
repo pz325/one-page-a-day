@@ -808,7 +808,7 @@ ZHENGLIN_YEAR7 = {
                 ('pretiōsae', 'precious'),
                 ('iste mōns', 'that (terrible) mountain'),
                 ('scio', 'know'),
-                ('nihil cūrō', 'I don\'t care),
+                ('nihil cūrō', 'I don\'t care'),
                 ('pavor', 'panic'),
                 ('cinis', 'ash'),
                 ('iam', 'now'),
