@@ -855,7 +855,7 @@ TUTOR = {
                 ('médico', 'doctor'),
                 ('¿Que haces?', 'What do you do?'),
                 ('¿A qué te dedicas? / ¿En qué trabajas?', 'What\'s your job?'),
-                ('liada', 'I\'m busy),
+                ('liada', 'I\'m busy'),
                 ('saber', 'to know'),
                 ('siempre', 'always'),
                 ('pues', 'because ...'),
