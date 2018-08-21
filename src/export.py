@@ -4,6 +4,7 @@ import assets.spanish.year7
 import assets.latin.year7
 import assets.chinese.year1
 import assets.latin.year8
+import assets.spanish.year8
 
 BOOKS = [
     assets.spanish.year7.ZOOM_ESPANOL_1,
@@ -12,7 +13,8 @@ BOOKS = [
     assets.latin.year8.ZHENGLIN_YEAR8,
     assets.spanish.year7.TUTOR,
     assets.chinese.year1.YU_WEN_SHIZI,
-    assets.chinese.year1.YU_WEN_XIEZI
+    assets.chinese.year1.YU_WEN_XIEZI,
+    assets.spanish.year8.TUTOR
 ]
 
 

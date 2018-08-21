@@ -775,7 +775,7 @@ SPELLING_BEE = {
 contents from tutor
 '''
 TUTOR = {
-    'title': 'Tutor',
+    'title': 'Tutor Year7',
     'user': 'Zhenglin',
     'template': 'table',
     'subject': 'spanish',
