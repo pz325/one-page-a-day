@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0301
 
+
 '''
 contents of Zhenglin's  Latin year 7
 '''
@@ -9,7 +10,7 @@ ZHENGLIN_YEAR7 = {
     'user': 'Zhenglin',
     'template': 'table',
     'subject': 'latin',
-    'sections':[
+    'sections': [
         {
             'title': 'Caecilius',
             'exercises': [
@@ -102,7 +103,7 @@ ZHENGLIN_YEAR7 = {
                 ('spectat', 'looks at'),
                 ('laetissimus', 'very happy')
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'Negotium',
             'exercises': [
@@ -166,7 +167,7 @@ ZHENGLIN_YEAR7 = {
                 ('docta', 'skillful, educated'),
                 ('satis', 'enough'),
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'In Foro',
             'exercises': [
@@ -234,7 +235,7 @@ ZHENGLIN_YEAR7 = {
                 ('eratis', 'you (pl.) were'),
                 ('erant', 'they were'),
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'In Theatro',
             'exercises': [
@@ -287,7 +288,7 @@ ZHENGLIN_YEAR7 = {
                 ('fūnambulus', 'tight-rope walker'),
                 ('nēmō', 'no one'),
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'Felix',
             'exercises': [
@@ -352,7 +353,7 @@ ZHENGLIN_YEAR7 = {
                 ('numquam', 'never'),
                 ('servās', 'look after'),
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'Cena',
             'exercises': [
@@ -440,7 +441,7 @@ ZHENGLIN_YEAR7 = {
                 ('dīligenter', 'carefully'),
                 ('cūrās', 'look after')
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'Gladiatores',
             'exercises': [
@@ -538,7 +539,7 @@ ZHENGLIN_YEAR7 = {
                 ('agnōvit', 'recognised'),
                 ('ad salūtem', 'to safety')
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'Thermae Stage 9',
             'exercises': [
@@ -610,7 +611,7 @@ ZHENGLIN_YEAR7 = {
                 ('prōcēdit', 'proceeds, advances'),
                 ('pulcher', 'beautiful')
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'Rhetor Stage 10',
             'exercises': [
@@ -702,7 +703,7 @@ ZHENGLIN_YEAR7 = {
                 ('vehementer', 'violently, loudly'),
                 ('vōs', 'you (plural)')
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'Candidati State 11',
             'exercises': [
@@ -783,7 +784,7 @@ ZHENGLIN_YEAR7 = {
                 ('verberat', 'strikes, beats'),
                 ('vir', 'man')
             ]
-        }, # a section object
+        },  # a section object
         {
             'title': 'Vesuvius Stage 12',
             'exercises': [
@@ -867,6 +868,74 @@ ZHENGLIN_YEAR7 = {
                 ('terra', 'ground, land'),
                 ('timet', 'is afraid, fears'),
             ]
-        }, # a section object
+        },  # a section object
+    ]
+}
+
+'''
+contents of Xinrong's Latin 1
+'''
+XINRONG_LATIN_1 = {
+    'title': 'Cambridge Latin Course Book I',
+    'user': 'Xinrong',
+    'template': 'table',
+    'subject': 'latin',
+    'sections': [
+        ZHENGLIN_YEAR7['sections'][0],
+        ZHENGLIN_YEAR7['sections'][1],
+    ]
+}
+
+XINONG_OAK = {
+    'title': 'Oak Accademy',
+    'user': 'Xinrong',
+    'template': 'table',
+    'subject': 'latin',
+    'sections': [
+        {
+            'title': '1',
+            'exercises': [
+                ('discendo', 'Learning Objective'),
+                ('elephantus', 'elephant'),
+                ('camelus', 'camel'),
+                ('leopardus', 'leopard'),
+                ('crocadila', 'crocadile'),
+                ('schola', 'school'),
+                ('ursa', 'bear'),
+                ('vivarium', 'zoo'),
+                ('sepctaculum', 'show'),
+                ('aiai!', 'oh no!'),
+                ('feilitus!', 'hiss!'),
+                ('sum', 'I am'),
+                ('intrat', 'he, she enters'),
+                ('timet', 'fears, afraid'),
+                ('salutat', 'greets'),
+                ('dicit', 'speaks'),
+                ('festinat', 'hurries'),
+                ('ambulat', 'walks'),
+                ('laborat', 'works'),
+                ('consumit', 'eats'),
+                ('non', 'not'),
+                ('amat', 'he, she loves'),
+                ('spectat', 'he, she watches'),
+                ('oppugnat', 'he, she attacks'),
+                ('necat', 'he, she kills'),
+                ('nunc', 'now'),
+                ('captivus', 'prisoner'),
+                ('bestiarius', 'beast-fighter'),
+                ('leo', 'lion'),
+                ('tigris', 'tiger'),
+                ('tigrem', 'tiger (object)'),
+                ('leonem', 'lion (object)'),
+                ('laetus', 'happy (masculine)'),
+                ('laeta', 'happy (femenine)'),
+                ('iratus', 'angry (masculine)'),
+                ('irata', 'angry (femenine)'),
+                ('bonus', 'good'),
+                ('malus', 'bad'),
+                ('magnus', 'big'),
+                ('parvus', 'small'),
+            ]
+        }
     ]
 }
